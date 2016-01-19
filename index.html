@@ -11,6 +11,33 @@
     <title></title>
   </head>
   <body>
-  
+    <div class="container">
+      <header>
+          <h1>Is it a triangle?</h1>
+          <h3>Enter your side lengths below!</h3>
+      </header>
+      <form>
+        <div class="form-group">
+          <label for="length1">Length 1</label>
+          <input id="length1" type="text">
+        </div>
+        <div class="form-group">
+          <label for="length2">Length 2</label>
+          <input id="length2" type="text">
+        </div>
+        <div class="form-group">
+          <label for="length3">Length 3</label>
+          <input id="length3" type="text">
+        </div>
+        <button type="submit" class="btn btn-success" name="button">Find out now!</button>
+      </form>
+      <div id="resultstrue">
+        <p>You made a <span class="type"></span> triangle!</p>
+      </div>
+      <div id="resultsfalse">
+        <p>You did not make a triangle! Try again!</p>
+      </div>
+    </div>
+
   </body>
 </html>
