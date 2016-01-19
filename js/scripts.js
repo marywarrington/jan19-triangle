@@ -25,10 +25,15 @@ $(document).ready(function() {
     var length3 = parseInt($("input#length3").val());
 
     var triangleTest = triangle(length1, length2, length3);
+    var triangleTypeTest = triangleType(length1, length2, length3);
+
       if (!triangleTest) {
         $("#resultsfalse").show();
       } else {
-        alert("sup");
+        if (triangleTypeTest = "equilateral") {
+          $("#resultstrue").show();
+          $(".type").text("equilateral");
+        }
       }
     event.preventDefault();
   });
