@@ -28,8 +28,7 @@ $(document).ready(function() {
       if (!triangleTest) {
         $("#resultsfalse").show();
       } else {
-      
-        }
+        alert("sup");
       }
     event.preventDefault();
   });
