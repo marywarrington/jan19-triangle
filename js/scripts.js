@@ -12,3 +12,21 @@ var triangle = function(length1, length2, length3) {
     return "scalene";
   }
 };
+
+$(document).ready(function() {
+  $("form#triangulate").submit(function(event) {
+    var length1 = parseInt($("input#length1").val());
+    var length2 = parseInt($("input#length2").val());
+    var length3 = parseInt($("input#length3").val());
+
+    if (!triangle) {
+      $("#resultsfalse").show();
+    } else {
+      if ("equilateral") {
+        $("#resultstrue").show();
+        $(".type").text("equilateral");
+      }
+    }
+  event.preventDefault();
+  });
+});
