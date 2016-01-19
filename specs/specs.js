@@ -2,6 +2,9 @@ describe('triangle', function() {
     it("is not a triangle for any two lengths less than or equal to the third length", function() {
       expect(triangle(4,5,20)).to.equal(false)
     });
+    it("is a triangle for any valid triangle lengths", function() {
+      expect(triangle(4,5,6)).to.equal(true)
+    });
   });
 
 describe('triangleType', function() {

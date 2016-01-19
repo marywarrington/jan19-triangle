@@ -1,6 +1,8 @@
 var triangle = function(length1, length2, length3) {
   if ((length1 + length2 <= length3) || (length1 + length3 <= length2) || (length2 + length3 <= length1)) {
-      return false;
+    return false;
+  } else {
+    return true;
   }
 };
 
@@ -23,11 +25,11 @@ $(document).ready(function() {
     var length3 = parseInt($("input#length3").val());
 
     var triangleTest = triangle(length1, length2, length3);
-
       if (!triangleTest) {
         $("#resultsfalse").show();
       } else {
-
+      
+        }
       }
     event.preventDefault();
   });
