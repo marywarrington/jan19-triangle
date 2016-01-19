@@ -33,6 +33,9 @@ $(document).ready(function() {
         if (triangleTypeTest = "equilateral") {
           $("#resultstrue").show();
           $(".type").text("equilateral");
+        } else if (triangleTypeTest = "isosceles") {
+          $("#resultstrue").show();
+          $(".type").text("isosceles");
         }
       }
     event.preventDefault();
