@@ -1,6 +1,6 @@
 describe('triangle', function() {
     it("is not a triangle for any two lengths less than or equal to the third length", function() {
-      expect(triangle(4,5,20)).to.equal(true)
+      expect(triangle(4,5,20)).to.equal(false)
     });
     it("is equilateral for three equal lengths", function() {
       expect(triangle(3,3,3)).to.equal("equilateral");

@@ -1,17 +1,19 @@
 var triangle = function(length1, length2, length3) {
   if ((length1 + length2 <= length3) || (length1 + length3 <= length2) || (length2 + length3 <= length1)) {
-      return true;
-  }
-  if ((length1 === length2) && (length1 === length3)) {
-    return "equilateral";
-  }
-  if (((length1 === length2) && (length1 != length3)) || ((length2 === length3) && (length2 != length1)) || ((length1 === length3) && (length1 != length2))) {
-    return "isosceles";
-  }
-  if ((length1 != length2) && (length1 != length3) && (length2 != length3)) {
-    return "scalene";
+      return false;
   }
 };
+
+//   if ((length1 === length2) && (length1 === length3)) {
+//     return "equilateral";
+//   }
+//   if (((length1 === length2) && (length1 != length3)) || ((length2 === length3) && (length2 != length1)) || ((length1 === length3) && (length1 != length2))) {
+//     return "isosceles";
+//   }
+//   if ((length1 != length2) && (length1 != length3) && (length2 != length3)) {
+//     return "scalene";
+//   }
+// };
 
 $(document).ready(function() {
   $("form#triangulate").submit(function(event) {
@@ -19,14 +21,13 @@ $(document).ready(function() {
     var length2 = parseInt($("input#length2").val());
     var length3 = parseInt($("input#length3").val());
 
-    if (!triangle) {
-      $("#resultsfalse").show();
-    } else {
-      if ("equilateral") {
-        $("#resultstrue").show();
-        $(".type").text("equilateral");
+    var triangleTest = triangle(length1, length2, length3);
+
+      if (!triangleTest) {
+        $("#resultsfalse").show();
+      } else {
+
       }
-    }
-  event.preventDefault();
+    event.preventDefault();
   });
 });
