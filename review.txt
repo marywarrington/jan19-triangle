@@ -1,0 +1,24 @@
+Is the Github documentation - commits and README - thorough and descriptive?
+
+
+Excellent commit messages!!
+readme is there
+
+Is the code easy to read (good indentation, spacing, naming)?
+Were branching and looping used effectively?
+
+
+yes nice work
+
+Is the web page(s) styled using Bootstrap and CSS?
+
+yes
+
+Is the site user-friendly?
+
+see note about .empty(); but yes.
+
+Do you have any additional constructive criticism or positive feedback to share?
+
+great work.
+try .empty(); for use in clearing your output without page refresh.
