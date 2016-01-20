@@ -26,21 +26,21 @@ $(document).ready(function() {
 
     var triangleTest = triangle(length1, length2, length3);
     var triangleTypeTest = triangleType(length1, length2, length3);
-
-      if (!triangleTest) {
-        $("#resultsfalse").show();
+    
+    if (!triangleTest) {
+      $("#resultsfalse").show();
+    } else {
+      if (triangleTypeTest === "equilateral") {
+        $("#resultstrue").show();
+        $(".type").text("equilateral");
+      } else if (triangleTypeTest === "isosceles") {
+        $("#resultstrue").show();
+        $(".type").text("isosceles");
       } else {
-        if (triangleTypeTest = "equilateral") {
-          $("#resultstrue").show();
-          $(".type").text("equilateral");
-        } else if (triangleTypeTest = "isosceles") {
-          $("#resultstrue").show();
-          $(".type").text("isosceles");
-        } else {
-          $("#resultstrue").show();
-          $(".type").text("scalene");
-        }
+        $("#resultstrue").show();
+        $(".type").text("scalene");
       }
+    }
     event.preventDefault();
   });
 });
